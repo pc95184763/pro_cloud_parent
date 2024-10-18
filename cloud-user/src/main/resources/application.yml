@@ -15,6 +15,7 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.6.100:8848
+        cluster-name: SH
   application:
     name: cloud-user   # 每一个服务注册到nacos注册中心都需要提供一个服务名称,order微服务注册的时候需要更改微服务名称
 

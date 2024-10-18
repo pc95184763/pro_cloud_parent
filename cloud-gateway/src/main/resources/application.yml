@@ -1,0 +1,23 @@
+server:
+  port: 8222
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.6.100:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: cloud-user
+          uri: lb://cloud-user
+          predicates:
+            - Path=/api/user/**
+        - id: cloud-order
+          uri: lb://spzx-cloud-order
+          predicates:
+            - Path=/*/order/** # 路径匹配
