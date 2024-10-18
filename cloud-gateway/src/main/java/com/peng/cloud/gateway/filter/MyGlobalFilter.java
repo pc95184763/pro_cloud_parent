@@ -1,4 +1,4 @@
-package com.peng.cloud.filter;
+package com.peng.cloud.gateway.filter;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

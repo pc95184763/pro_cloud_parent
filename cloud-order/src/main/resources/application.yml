@@ -13,11 +13,11 @@ spring:
     openfeign:
       client:
         config:
-          default:    #指定服务的日志格式
+          cloud-user:    #指定服务的日志格式
             logger-level: full
             read-timeout: 5000
             connect-timeout: 2000
-#            retryer:  com.peng.order.feign.MyFeignRetryer
+            retryer:  com.peng.order.feign.MyFeignRetryer
     # 配置nacos注册中心的地址
     nacos:
       discovery:
@@ -27,7 +27,6 @@ spring:
     loadbalancer:
       nacos:
         enabled: true
-
   application:
     name: cloud-order   # 每一个服务注册到nacos注册中心都需要提供一个服务名称,order微服务注册的时候需要更改微服务名称
 

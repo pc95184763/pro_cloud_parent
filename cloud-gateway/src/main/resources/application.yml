@@ -17,7 +17,17 @@ spring:
           uri: lb://cloud-user
           predicates:
             - Path=/api/user/**
+          filters:
+            - AddRequestHeader=Truth, pengpeng123
         - id: cloud-order
-          uri: lb://spzx-cloud-order
+          uri: lb://cloud-order
           predicates:
             - Path=/*/order/** # 路径匹配
+#      default-filters:
+#        - AddRequestParameter=color, xxxxxxxxxxxxxxxxxxxxx
+#            - After=2024-10-18T20:02:47.789-07:00[Asia/Shanghai]
+
+
+
+
+

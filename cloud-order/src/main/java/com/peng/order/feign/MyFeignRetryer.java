@@ -10,8 +10,9 @@ public class MyFeignRetryer implements Retryer {
     @Override
     public void continueOrPropagate(RetryableException e) {
         if ( start >= end) {
-
+            throw new RuntimeException(e);
         }
+        start++;
     }
 
     @Override

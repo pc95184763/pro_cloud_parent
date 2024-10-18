@@ -43,7 +43,6 @@ public class OrderServiceImpl implements OrderService {
         User user = userFeignClient.getUserByUserId( order.getUserId() );
 
         System.out.println( user );
-
         order.setUser(user);
 
         return order;
